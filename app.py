@@ -30,14 +30,14 @@ st.markdown(f"""
   .card {{ background:#141a22; border:1px solid {LINE}; border-left:3px solid {ACCENT};
           border-radius:6px; padding:.8rem 1rem; margin-bottom:.5rem; }}
   .reason {{ font-family:ui-monospace,monospace; font-size:.8rem; color:{WARN}; }}
-  /* tabs: brighten inactive labels, accent the active one */
-  .stTabs [data-baseweb="tab-list"] {{ gap:1.4rem; border-bottom:1px solid {LINE}; }}
-  .stTabs [data-baseweb="tab-list"] button p {{ font-size:1rem; font-weight:600; }}
-  .stTabs [data-baseweb="tab-list"] button {{ color:#b7c2d1; }}
-  .stTabs [data-baseweb="tab-list"] button:hover {{ color:#eef2f7; }}
-  .stTabs [data-baseweb="tab-list"] button[aria-selected="true"],
-  .stTabs [data-baseweb="tab-list"] button[aria-selected="true"] p {{ color:{ACCENT}; }}
-  .stTabs [data-baseweb="tab-highlight"] {{ background-color:{ACCENT}; }}
+  /* tabs: force-brighten inactive labels, accent the active one */
+  .stTabs [data-baseweb="tab-list"] {{ gap:1.6rem; border-bottom:1px solid {LINE}; }}
+  .stTabs [data-baseweb="tab-list"] button [data-testid="stMarkdownContainer"] p,
+  .stTabs [data-baseweb="tab-list"] button p {{ font-size:1.02rem !important; font-weight:600 !important; color:#ccd5e1 !important; }}
+  .stTabs [data-baseweb="tab-list"] button:hover [data-testid="stMarkdownContainer"] p {{ color:#ffffff !important; }}
+  .stTabs [data-baseweb="tab-list"] button[aria-selected="true"] [data-testid="stMarkdownContainer"] p,
+  .stTabs [data-baseweb="tab-list"] button[aria-selected="true"] p {{ color:{ACCENT} !important; }}
+  .stTabs [data-baseweb="tab-highlight"] {{ background-color:{ACCENT} !important; }}
 </style>
 """, unsafe_allow_html=True)
 
