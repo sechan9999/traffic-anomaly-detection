@@ -1,0 +1,6 @@
+incident,class,latency_windows,latency_min,n_ips_alerted,n_ips_total
+A_syn_flood,ddos,0,0,38,38
+B_volumetric,ddos,0,0,25,25
+C_slow_rate,anomalous,0,0,29,30
+D_retry_storm,retry,0,0,16,20
+E_dup_flood,duplicate,0,0,15,15

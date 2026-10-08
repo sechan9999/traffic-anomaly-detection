@@ -1,0 +1,6 @@
+,precision,recall,f1,support
+legitimate,1.0,1.0,1.0,77381.0
+duplicate,1.0,1.0,1.0,18.0
+retry,1.0,1.0,1.0,54.0
+anomalous,0.883,0.977,0.927,216.0
+ddos,1.0,1.0,1.0,91.0

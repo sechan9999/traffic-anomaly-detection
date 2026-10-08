@@ -1,0 +1,7 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+data/telemetry.csv
+outputs/alerts.csv
+.DS_Store

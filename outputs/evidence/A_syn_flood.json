@@ -1,0 +1,43 @@
+{
+  "incident_id": "A_syn_flood",
+  "true_class": "ddos",
+  "window": {
+    "start_ts": "2026-06-10 14:00:00",
+    "end_ts": "2026-06-10 14:25:00",
+    "n_windows": 6
+  },
+  "entities": {
+    "n_total": 38,
+    "n_alerted": 38,
+    "top5_by_robust_z": {
+      "10.0.1.14": 124.33,
+      "10.0.1.11": 118.71,
+      "10.0.0.11": 88.9,
+      "10.0.0.19": 57.56,
+      "10.0.0.25": 42.28
+    },
+    "max_co_spike_in_subnet": 19
+  },
+  "key_stats": {
+    "peak_conns_per_5min": 426,
+    "median_conns_per_5min": 162.0,
+    "max_syn_ratio": 10.0,
+    "max_retry_ratio": 0.056,
+    "max_dup_ratio": 0.033,
+    "max_rz_c": 124.33
+  },
+  "detectors_fired": [
+    "robust-z",
+    "count-model",
+    "co-spike-upgrade"
+  ],
+  "reasons_sample": [
+    "rz_c 38.8>=4.0; count-model p<0.0001; co-spike x19 in 10.0.0.0/24",
+    "rz_c 26.6>=4.0; count-model p<0.0001; co-spike x19 in 10.0.0.0/24",
+    "rz_c 34.7>=4.0; count-model p<0.0001; co-spike x18 in 10.0.0.0/24"
+  ],
+  "classifier_verdict": {
+    "majority_class": "ddos",
+    "vote_share": 1.0
+  }
+}

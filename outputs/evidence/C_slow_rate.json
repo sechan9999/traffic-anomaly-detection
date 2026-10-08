@@ -1,0 +1,43 @@
+{
+  "incident_id": "C_slow_rate",
+  "true_class": "anomalous",
+  "window": {
+    "start_ts": "2026-06-12 03:00:00",
+    "end_ts": "2026-06-12 04:55:00",
+    "n_windows": 24
+  },
+  "entities": {
+    "n_total": 30,
+    "n_alerted": 29,
+    "top5_by_robust_z": {
+      "10.0.4.22": 27.25,
+      "10.0.5.12": 26.64,
+      "10.0.5.22": 25.41,
+      "10.0.4.17": 13.13,
+      "10.0.5.19": 12.89
+    },
+    "max_co_spike_in_subnet": 11
+  },
+  "key_stats": {
+    "peak_conns_per_5min": 92,
+    "median_conns_per_5min": 9.0,
+    "max_syn_ratio": 1.5,
+    "max_retry_ratio": 0.071,
+    "max_dup_ratio": 0.033,
+    "max_rz_c": 27.25
+  },
+  "detectors_fired": [
+    "robust-z",
+    "count-model",
+    "co-spike-upgrade"
+  ],
+  "reasons_sample": [
+    "co-spike x11 in 10.0.4.0/24",
+    "co-spike x8 in 10.0.4.0/24",
+    "rz_c 4.2>=4.0"
+  ],
+  "classifier_verdict": {
+    "majority_class": "anomalous",
+    "vote_share": 0.992
+  }
+}

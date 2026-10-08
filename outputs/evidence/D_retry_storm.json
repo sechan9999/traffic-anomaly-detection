@@ -1,0 +1,42 @@
+{
+  "incident_id": "D_retry_storm",
+  "true_class": "retry",
+  "window": {
+    "start_ts": "2026-06-13 10:00:00",
+    "end_ts": "2026-06-13 10:40:00",
+    "n_windows": 9
+  },
+  "entities": {
+    "n_total": 20,
+    "n_alerted": 16,
+    "top5_by_robust_z": {
+      "10.0.6.11": 9.49,
+      "10.0.1.11": 6.4,
+      "10.0.3.15": 6.31,
+      "10.0.5.10": 5.9,
+      "10.0.5.16": 5.83
+    },
+    "max_co_spike_in_subnet": 5
+  },
+  "key_stats": {
+    "peak_conns_per_5min": 67,
+    "median_conns_per_5min": 16.0,
+    "max_syn_ratio": 1.18,
+    "max_retry_ratio": 0.682,
+    "max_dup_ratio": 0.042,
+    "max_rz_c": 9.49
+  },
+  "detectors_fired": [
+    "robust-z",
+    "count-model"
+  ],
+  "reasons_sample": [
+    "rz_c 4.9>=4.0",
+    "rz_c 5.9>=4.0",
+    "rz_c 5.9>=4.0"
+  ],
+  "classifier_verdict": {
+    "majority_class": "retry",
+    "vote_share": 1.0
+  }
+}

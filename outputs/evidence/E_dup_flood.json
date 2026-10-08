@@ -1,0 +1,42 @@
+{
+  "incident_id": "E_dup_flood",
+  "true_class": "duplicate",
+  "window": {
+    "start_ts": "2026-06-14 16:00:00",
+    "end_ts": "2026-06-14 16:15:00",
+    "n_windows": 4
+  },
+  "entities": {
+    "n_total": 15,
+    "n_alerted": 15,
+    "top5_by_robust_z": {
+      "10.0.7.14": 20.71,
+      "10.0.7.10": 17.2,
+      "10.0.6.17": 16.5,
+      "10.0.6.16": 16.5,
+      "10.0.6.12": 13.5
+    },
+    "max_co_spike_in_subnet": 7
+  },
+  "key_stats": {
+    "peak_conns_per_5min": 99,
+    "median_conns_per_5min": 39.0,
+    "max_syn_ratio": 1.17,
+    "max_retry_ratio": 0.048,
+    "max_dup_ratio": 0.714,
+    "max_rz_c": 20.71
+  },
+  "detectors_fired": [
+    "robust-z",
+    "count-model"
+  ],
+  "reasons_sample": [
+    "rz_c 7.8>=4.0; count-model p<0.0001",
+    "count-model p<0.0001",
+    "rz_c 6.0>=4.0; count-model p<0.0001"
+  ],
+  "classifier_verdict": {
+    "majority_class": "duplicate",
+    "vote_share": 1.0
+  }
+}
